@@ -1,11 +1,15 @@
 import LeftSide from "./LeftSide";
 import Header from "./Header";
+import RightSide from "./RightSide";
 
 function Home() {
   return (
-    <div className="w-screen h-screen bg-slate-950 ">
+    <div className="w-full h-full bg-slate-950 scroll-smooth">
       <Header />
-      <LeftSide />
+      <div className='flex flex-row'>
+        <LeftSide />
+        <RightSide />
+      </div>
     </div>
   );
 }
