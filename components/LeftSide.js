@@ -25,13 +25,13 @@ function LeftSide() {
     data = frData;
   }
   return (
-    <div className="flex flex-col sticky justify-evenly items-center w-1/2 h-screen pl-20 pt-1 pb-20">
+    <div className="flex flex-col justify-evenly items-center w-1/2 h-screen pl-20 pt-1 pb-20">
       <div>
-        <h1 className="text-white text-3xl opacity-90">{data.h1}</h1>
+        <h1 className="text-white text-4xl opacity-90">{data.h1}</h1>
         <h2 className="text-white text-xl opacity-50">{data.h2}</h2>
       </div>
       <div className="w-full flex flex-col items-center space-y-4">
-        <h3 className="text-teal-600 text-lg opacity-90">{data.h3}</h3>
+        <h3 className="text-cyan-400 text-lg opacity-90">{data.h3}</h3>
         <div className="flex flex-row w-full justify-evenly text-white">
           <ul className="">
             <h4 className="font-semibold text-lg">{data.ul}</h4>
@@ -55,10 +55,18 @@ function LeftSide() {
           </ul>
         </div>
         <div className="text-white space-x-4">
-          <a href="https://github.com/TahaAissat" target="_blank">
+          <a
+            className="hover:text-cyan-400"
+            href="https://github.com/TahaAissat"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faGithub} size="xl" />
           </a>
-          <a href="https://www.linkedin.com/in/tahaaissat/" target="_blank">
+          <a
+            className="hover:text-cyan-400"
+            href="https://www.linkedin.com/in/tahaaissat/"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faLinkedin} size="xl" />
           </a>
         </div>

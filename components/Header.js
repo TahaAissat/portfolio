@@ -3,18 +3,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { Popover } from "react-tiny-popover";
 import Image from "next/image";
+import Contact from "./Contact";
+import CV from "./CV";
+
 function Header() {
   const dispatch = useDispatch();
   const [isPopoverOpen, setIsPopoeverOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCVModalOpen, setIsCVModalOpen] = useState(false)
   const language = useSelector((state) => state.language.value);
   let data = {};
   const engData = {
-    m1: "About",
     m2: "Projects",
     m3: "Resume",
   };
   const frData = {
-    m1: "A propos",
     m2: "Projets",
     m3: "CV",
   };
@@ -24,11 +27,18 @@ function Header() {
     data = frData;
   }
 
+  const handleSend = () => {
+    setIsModalOpen(false)
+  }
+  const handleClose = () => {
+    setIsCVModalOpen(false)
+  }
+
   return (
-    <div className="w-screen h-36 flex flex-row-reverse justify-start items-center pr-12 ">
+    <div className="w-screen h-36 flex flex-row-reverse justify-start items-center pr-8 ">
       <Popover
         isOpen={isPopoverOpen}
-        position={["bottom", "left", "right", "top"]}
+        positions={["bottom", "left", "right", "top"]}
         onClickOutside={() => setIsPopoeverOpen(false)}
         padding={10}
         content={
@@ -63,13 +73,24 @@ function Header() {
           )}
         </button>
       </Popover>
-      <div className="flex flex-row justify-evenly w-1/2 pl-72">
+      <div className="flex flex-row justify-evenly w-1/2 pl-96">
         <ul className="text-white flex flex-row  items-center space-x-10">
-          <li>{data.m1}</li>
-          <li>{data.m2}</li>
-          <li>{data.m3}</li>
-          <li>Contact</li>
+          <li
+            className="hover:text-cyan-400 cursor-pointer"
+            onClick={() => setIsCVModalOpen(true)}
+          >
+            {data.m3}
+          </li>
+
+          <li
+            className="hover:text-cyan-400 cursor-pointer"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Contact
+          </li>
         </ul>
+        {isModalOpen ? <Contact handleSend={handleSend} /> : null}
+        {isCVModalOpen ? <CV handleClose={handleClose} /> : null}
       </div>
     </div>
   );
