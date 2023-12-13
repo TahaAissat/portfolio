@@ -26,48 +26,48 @@ function LeftSide() {
   }
   return (
     <div className="flex flex-col justify-evenly items-center w-1/2 h-screen pl-20 pt-1 pb-20">
-      <div>
+      <div className="flex flex-col w-full items-start">
         <h1 className="text-white text-4xl opacity-90">{data.h1}</h1>
-        <h2 className="text-white text-xl opacity-50">{data.h2}</h2>
+        <h2 className="text-white text-2xl opacity-50">{data.h2}</h2>
       </div>
-      <div className="w-full flex flex-col items-center space-y-4">
-        <h3 className="text-cyan-400 text-lg opacity-90">{data.h3}</h3>
-        <div className="flex flex-row w-full justify-evenly text-white">
-          <ul className="">
-            <h4 className="font-semibold text-lg">{data.ul}</h4>
+      <div className="w-full flex flex-col  items-center space-y-4">
+        <h3 className="flex flex-row w-full justify-start text-cyan-400 text-2xl opacity-90 pl-42">{data.h3}</h3>
+        <div className="flex flex-row w-full justify-start space-x-16 text-white pb-10">
+          <ul>
+            <h4 className="font-semibold text-xl">{data.ul}</h4>
             <li>Javascript(ES6)</li>
             <li>HTML</li>
             <li>CSS</li>
           </ul>
           <ul>
-            <h4 className="font-semibold text-lg">Frameworks</h4>
+            <h4 className="font-semibold text-xl">Frameworks</h4>
             <li>Express</li>
             <li>Node</li>
             <li>React/Next</li>
             <li>React Native</li>
           </ul>
           <ul>
-            <h4 className="font-semibold text-lg">{data.tools}</h4>
+            <h4 className="font-semibold text-xl">{data.tools}</h4>
             <li>Git & GitHub</li>
             <li>MongoDB/Mongoose</li>
             <li>Tailwind</li>
             <li>Postman</li>
           </ul>
         </div>
-        <div className="text-white space-x-4">
+        <div className="w-full flex flex-row justify-start text-white space-x-4 mt-8">
           <a
             className="hover:text-cyan-400"
             href="https://github.com/TahaAissat"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faGithub} size="xl" />
+            <FontAwesomeIcon icon={faGithub} size="2xl" />
           </a>
           <a
             className="hover:text-cyan-400"
             href="https://www.linkedin.com/in/tahaaissat/"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faLinkedin} size="xl" />
+            <FontAwesomeIcon icon={faLinkedin} size="2xl" />
           </a>
         </div>
       </div>

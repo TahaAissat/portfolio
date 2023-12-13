@@ -12,10 +12,10 @@ function About() {
      p4 : 'at the end of which I obtained my RNCP certification, I\'m currently looking for job opportunities to learn even more !'
   };
   const frData = {
-    p1: "Après plusieurs années passées à considerer la perspective, j'ai finalement decidé de débuter ma carrière de développeur web en 2023",
+    p1: "Après plusieurs années passées à considerer la perspective, j'ai finalement decidé de débuter ma carrière de développeur web en 2023.",
     p2 : "Pouvoir apprendre et évoluer au quotidien, la satisfaction ressentie lorsque je résous un problème sont les elements qui m'assurent que je me lasserais jamais de coder !",
     p3 : 'Après un bootcamp intense de 10 semaines à ',
-    p4 : 'au terme duquel j\'ai obtenu une certification RNCP, je suis actuellement en recherche d\'un poste !'
+    p4 : 'au terme duquel j\'ai obtenu une certification RNCP, je suis actuellement en recherche d\'un poste.'
   };
 
   if (language === "english") {
@@ -25,9 +25,9 @@ function About() {
   }
   return (
     <div className="opacity-80">
-      <p className="text-white text-lg mb-3">{data.p1}</p>
-      <p className="text-white text-lg mb-3">{data.p2}</p>
-      <p className="text-white text-lg">
+      <p className="text-white text-xl mb-3">{data.p1}</p>
+      <p className="text-white text-xl mb-3">{data.p2}</p>
+      <p className="text-white text-xl">
         {data.p3}
         <a className='text-cyan-400 hover:text-cyan-700 font-semibold' href="https://www.lacapsule.academy" target='_blank'>La Capsule</a> {data.p4}
       </p>
