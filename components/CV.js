@@ -23,7 +23,7 @@ if(language === 'english'){
         <div className="flex flex-col justify-center items-center w-9/12 h-full bg-gray-100 ">
           <div className="flex flex-row w-full pr-10 pb-6 justify-end">
             <button
-              className=" mt-6 bg-slate-800 text-cyan-400 w-1/12 h-10"
+              className="mt-6 bg-slate-800 text-cyan-400 w-1/12 h-10 rounded-xl"
               onClick={() => handleClose()}
             >
               {data.b}
