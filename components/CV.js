@@ -29,7 +29,7 @@ if(language === 'english'){
               {data.b}
             </button>
           </div>
-          <iframe src="CV2023.pdf" width="90%" height="90%" />
+          <iframe src="CV2024.pdf" width="90%" height="90%" />
         </div>
       </div>
     );

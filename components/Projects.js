@@ -10,14 +10,16 @@ function Projects() {
     p1: "A webapp I built that allows you to search and add a city's weather report to your favorites so that you may have it available anytime you log in.",
     p2: "A mobile application we built with two other collegues during my bootcamp. It allows ambulance company owners to track more effiently their interventions and patients",
     p3 : 'On the left a demonstration of the user journey of our MVP',
-    p4 : 'Links to the repositories of this MVP :'
+    p4 : 'Links to the repositories of this MVP :',
+    p5 : 'A webapp that displays the news of tech journal The Verge, allows you to create/log in to an account and bookmark articles.'
   };
   const frData = {
     h1: "Projets",
     p1: "Une application web qui permet de rechercher le rapport météo d'une ville et de l'ajouter à vos favoris afin de l'afficher sur l'écran d'acceuil lorsque vous vous connectez.",
     p2: "Une application mobile créee en collaboration avec deux collègues lors de mon bootcamp. Elle permet aux gérants d'entreprises d'ambulances privées de gérer plus éfficacement leurs interventions et patients.",
     p3 : 'Sur la gauche une démonstration du user journey du MVP',
-    p4 : 'Liens vers les repositoires du MVP : '
+    p4 : 'Liens vers les repositoires du MVP : ',
+    p5 : 'Une application web qui affiche les articles du journal tech The Verge, qui permet la création et connection à un compte et la sauvegarde sous forme de bookmarks d\'articles.'
   };
   let data = {};
   if (language === "english") {
@@ -34,7 +36,7 @@ function Projects() {
       <a href="https://weather-report-front.vercel.app/" target="_blank">
         <div className="hover:bg-slate-800 text-white hover:text-cyan-400 p-2 rounded-lg my-1">
           <h2 className="text-2xl font-semibold ">Your weather report</h2>
-          <p className=" text-m">{data.p1}</p>
+          <p className=" text-sm">{data.p1}</p>
         </div>
       </a>
       <div className="space-x-2 p-2 mb-5">
@@ -59,7 +61,7 @@ function Projects() {
         onClick={() => setIsPopoeverOpen(!isPopoverOpen)}
       >
         <h2 className="text-2xl font-semibold">ECNA</h2>
-        <p className=" text-m">{data.p2}</p>
+        <p className=" text-sm">{data.p2}</p>
       </div>
       <div className="space-x-2 p-2">
         <span className="text-sm bg-slate-800 text-cyan-400 p-2 rounded-xl">
@@ -72,6 +74,7 @@ function Projects() {
           React Native
         </span>
       </div>
+      {/*ECNA Popover*/}
       {isPopoverOpen ? (
         <div className="flex fixed flex-col  justify-center items-center inset-0 z-50 bg-[#334155] bg-opacity-90">
           <div className="w-1/2 h-1/2  flex flex-row border-2 rounded-xl border-slate-900 ">
@@ -89,7 +92,7 @@ function Projects() {
                 <FontAwesomeIcon
                   icon={faXmarkCircle}
                   size="xl"
-                  color='white'
+                  color="white"
                   onClick={() => setIsPopoeverOpen(false)}
                 />
               </span>
@@ -117,6 +120,23 @@ function Projects() {
           </div>
         </div>
       ) : null}
+      <a href="https://morning-news-front-omega.vercel.app/" target="_blank">
+        <div className="hover:bg-slate-800 hover:cursor-pointer text-white hover:text-cyan-400 p-2 rounded-lg my-2">
+          <h2 className="text-2xl font-semibold">Morning News</h2>
+          <p className=" text-sm">{data.p5}</p>
+        </div>
+      </a>
+      <div className="space-x-2 p-2">
+        <span className="text-sm bg-slate-800 text-cyan-400 p-2 rounded-xl">
+          Express
+        </span>
+        <span className="text-sm bg-slate-800 text-cyan-400 p-2 rounded-xl">
+          Node
+        </span>
+        <span className="text-sm bg-slate-800 text-cyan-400 p-2 rounded-xl">
+          React Native
+        </span>
+      </div>
     </div>
   );
 }
